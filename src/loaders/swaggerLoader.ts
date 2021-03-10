@@ -17,7 +17,7 @@ export const swaggerLoader: MicroframeworkLoader = (settings: MicroframeworkSett
 
         let swaggerFile: any;
 
-        if (env.swagger.autogenerationEnabled) {
+        if (env.swagger.autoGenerationEnabled) {
             const schemas = validationMetadatasToSchemas({
                 classTransformerMetadataStorage: defaultMetadataStorage,
                 refPointerPrefix: '#/components/schemas/',

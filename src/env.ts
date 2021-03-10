@@ -63,7 +63,7 @@ export const env = {
     },
     swagger: {
         enabled: toBool(getOsEnv('SWAGGER_ENABLED')),
-        autogenerationEnabled: toBool(getOsEnv('SWAGGER_AUTOGENERATION_ENABLED')),
+        autoGenerationEnabled: toBool(getOsEnv('SWAGGER_AUTO_GENERATION_ENABLED')),
         route: getOsEnv('SWAGGER_ROUTE'),
         username: getOsEnv('SWAGGER_USERNAME'),
         password: getOsEnv('SWAGGER_PASSWORD'),
