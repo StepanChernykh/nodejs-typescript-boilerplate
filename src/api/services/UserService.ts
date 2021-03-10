@@ -6,7 +6,6 @@ import { Logger, LoggerInterface } from '../../decorators/Logger';
 import { User } from '../models/User';
 import { UserRepository } from '../repositories/UserRepository';
 import { events } from '../subscribers/events';
-import { NewUserInput } from '../types/input/NewUserInput';
 
 @Service()
 export class UserService {
@@ -46,7 +45,8 @@ export class UserService {
     }
 
     // Метод для добавления нового пользователя в базу данных
-    public async addUser(newUser: NewUserInput): Promise<User> {
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+    public async addUser(newUser: any): Promise<User> {
         this.log.info('UserService:addUser', { newUser });
         const newUserEntity = new User();
         if (newUser.firstName) {

@@ -77,7 +77,6 @@ export const env = {
         port: toNumber(getOsEnv('REDIS_PORT')),
     },
     hasura: {
-        enabled: toBool(getOsEnv('GRAPHQL_ENABLED')),
         remote: getOsEnv('HASURA_REMOTE'),
         secret: getOsEnv('HASURA_SECRET'),
         username: getOsEnv('HASURA_USERNAME'),
