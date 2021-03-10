@@ -15,10 +15,6 @@ module.exports = {
             script: 'cross-env NODE_ENV=production node dist/app.js',
             description: 'Starts the builded app',
         },
-        mesh: {
-            script: 'yarn graphql-mesh serve',
-            description: 'Starts the graphql-mesh',
-        },
         /**
          * Serves the current app and watches for changes to restart it
          */

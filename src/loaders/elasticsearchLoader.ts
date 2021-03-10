@@ -11,6 +11,7 @@ export const elasticsearchLoader: MicroframeworkLoader = (settings: Microframewo
         const client = new Client({
             node: env.elasticsearch.host,
         });
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         client.on('response', (err, result) => {
             if (err) {
                 log.error('Elasticsearch error', { error: err });

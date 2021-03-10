@@ -75,6 +75,7 @@
     "typescript": "^3.9.5",
     "uuid": "^8.1.0",
     "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.5.0",
     "yamljs": "^0.3.0"
   },
   "resolutions": {

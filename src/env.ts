@@ -45,8 +45,11 @@ export const env = {
     },
     log: {
         level: getOsEnv('LOG_LEVEL'),
-        json: toBool(getOsEnvOptional('LOG_JSON')),
         output: getOsEnv('LOG_OUTPUT'),
+        file: toBool(getOsEnv('LOG_FILE')),
+        filepath: getOsEnvOptional('LOG_FILEPATH'),
+        filename: getOsEnvOptional('LOG_FILENAME'),
+        rotate: toBool(getOsEnv('LOG_ROTATE')),
     },
     db: {
         type: getOsEnv('TYPEORM_CONNECTION'),
@@ -72,11 +75,6 @@ export const env = {
         enabled: toBool(getOsEnv('REDIS_ENABLED')),
         host: getOsEnv('REDIS_HOST'),
         port: toNumber(getOsEnv('REDIS_PORT')),
-    },
-    graphql: {
-        enabled: toBool(getOsEnv('GRAPHQL_ENABLED')),
-        route: getOsEnv('GRAPHQL_ROUTE'),
-        editor: toBool(getOsEnv('GRAPHQL_EDITOR')),
     },
     hasura: {
         enabled: toBool(getOsEnv('GRAPHQL_ENABLED')),
